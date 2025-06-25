@@ -12,8 +12,8 @@ app.config["SQLALCHEMY_DATABASE_URI"]=cadenaConexion
 db=SQLAlchemy(app)
 
 if __name__ == "__main__":
-    from routes.pelicula import *
     from routes.genero import *
+    from routes.pelicula import *
     with app.app_context():
         db.create_all()
     app.run(port=5000,debug=True)
