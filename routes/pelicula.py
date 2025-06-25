@@ -35,7 +35,7 @@ def listarPeliculas():
                 pelDuracion=datos["pelDuracion"],
                 pelResumen=datos["pelResumen"],
                 pelFoto=datos["pelFoto"],
-                idGenero=datos["idGenero"])
+                pelGenero=datos["pelGenero"])
             db.session.add(p)
             db.session.commit() 
             mensaje = "Pelicula registrada correctamente"
@@ -73,11 +73,12 @@ def listarPeliculaPorId(idPel):
     return jsonify({"mensaje": mensaje, "pelicula": pel})
   
   
-  @app.route("/eliminarPelicula/<int:idPel>", methods=["DELETE"])
-  def eliminarPeliculaCon(idPel):
+@app.route("/eliminarPelicula/<int:idPel>", methods=["DELETE"])
+def eliminarPeliculaCon(idPel):
     try:
         if request.method == "DELETE":
-            if pelicula= Pelicula.query.get(idPel):
+            pelicula = Pelicula.query.get(idPel)
+            if pelicula:
                 db.session.delete(pelicula)
                 db.session.commit()
                 mensaje = "Pelicula eliminada correctamente"

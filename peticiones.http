@@ -1,4 +1,8 @@
 
-GET http://http://127.0.0.1:5000/generos
+GET http://127.0.0.1:5000/generos
 
-GET http://http://127.0.0.1:5000/peliculas
+GET http://127.0.0.1:5000/peliculas
+
+POST http://127.0.0.1:5000/peliculas
+
+GET http://127.0.0.1:5000/eliminarPelicula/{idPelicula}
