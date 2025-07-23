@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet">
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2>APP PELICULAS MYSQL</h2>
+        </div>
+        <div class="w-50">
+            <div class="mb-3"><label for="peliculas">Peliculas</label></div>
+            <div class="mb-3 mt-3"><a href="/pelicula/crear"> CREAR PELICULAS </a></div>
+            <div class="mb-3 mt-3"><a href="/peliculas">LISTAR PELICULAS</a></div>
+        </div>
+        <div class="w-50">
+            <div class="mb-3"><label for="generos">Generos</label></div>
+            <div class="mb-3 mt-3"><a href="/generos">LISTAR GENEROS</a></div>
+        </div>
+    </div>
+</body>
+</html>

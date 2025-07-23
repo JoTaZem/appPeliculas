@@ -1,0 +1,30 @@
+
+.container{
+
+   display: flex;
+   flex-direction:row;
+   align-items: center;
+   border: 1px solid gray;
+}
+.w-50{
+    margin: 1px 10px;
+    border: 1px double rgba(36, 120, 139, 0.053);
+}
+
+.mb-3{
+    margin: 3px 3px;
+
+    
+}
+.mb-3:focus{
+    transform: scale(1.2);
+}
+.mt-3{
+    border-width: 15px;
+    border-radius: 10px;
+}
+a{
+    background-color: rgba(0, 255, 255, 0.421);
+    text-decoration: none;
+    color:black;
+}

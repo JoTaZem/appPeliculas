@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Registrar una Pelicula</title>
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet">
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+</head>
+<body>
+    <div class="container">
+        <div style="margin:0 auto" class="form">
+            <div  class="w-50"><h2 class="text-center mt-3">Registrar Pelicula</h2></div>
+            <form action="/pelicula/crear", method="post" style="margin: 0 auto">
+                <div class="mb-3 mt-3">
+                    <label for="txtCodigo" class="form-label fw-bold">Codigo:</label>
+                    <input type="text" class="form-control" id="txtCodigo" name="txtCodigo" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="txtTitulo" class="form-label fw-bold">Titulo:</label>
+                    <input type="text" class="form-control" id="txtTitulo" name="txtTitulo" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="txtProtagonista" class="form-label fw-bold">Protagonista:</label>
+                    <input type="text" class="form-control" id="txtProtagonista" name="txtProtagonista" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="txtDuracion" class="form-label fw-bold">Duracion:</label>
+                    <input type="text" class="form-control" id="txtDuracion" name="txtDuracion" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="txtResumen" class="form-label fw-bold">Resumen:</label>
+                    <input type="text" class="form-control" id="txtResumen" name="txtResumen" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="imgFoto" class="form-label fw-bold">Foto:</label>
+                    <input type="file" class="form-control" id="imgFoto" name="imgFoto" >
+                </div>
+                <div class="mb-3 mt-3">
+
+                    <label for="txtGenero" class="form-label fw-bold">Genero:</label>
+                    <input type="text" class="form-control" id="txtGenero" name="txtGenero" required>
+                </div>
+                <button type="submit" class="btn btn-secondary">Enviar</button>
+            </form>
+            <p class="text-center">{{mensaje}}</p>
+        </div>
+    </div>
+    
+</body>
+</html>
